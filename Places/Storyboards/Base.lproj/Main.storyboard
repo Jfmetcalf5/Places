@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DEC-XB-FNA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Place-->
+        <scene sceneID="g7O-gv-tli">
+            <objects>
+                <viewController id="xO7-fy-uw6" customClass="CreateNewPlaceViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VNB-gb-6hn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xll-mO-KsP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Place" selectedImage="Plus" id="BXs-KN-LYk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZe-3Q-qcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="466"/>
+        </scene>
+        <!--Places-->
+        <scene sceneID="fQ6-oa-4Rc">
+            <objects>
+                <viewController id="Ezd-Lg-J9W" customClass="VisitedPlacesViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZxH-nf-gfL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YY8-61-Bgg">
+                                <rect key="frame" x="0.0" y="264" width="375" height="354"/>
+                                <connections>
+                                    <segue destination="Pft-WQ-eog" kind="embed" id="QMR-5S-4MT"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-dO-GwP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="nDY-xB-riS"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Psb-lt-b7M" kind="embed" identifier="EmbedMapView" id="TZp-vq-xDQ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YY8-61-Bgg" firstAttribute="top" secondItem="uGf-dO-GwP" secondAttribute="bottom" constant="2" id="2fd-0B-VVJ"/>
+                            <constraint firstItem="YY8-61-Bgg" firstAttribute="leading" secondItem="ldO-QP-mOe" secondAttribute="leading" id="2oU-JZ-tGL"/>
+                            <constraint firstItem="uGf-dO-GwP" firstAttribute="top" secondItem="ldO-QP-mOe" secondAttribute="top" id="E46-d1-E22"/>
+                            <constraint firstItem="YY8-61-Bgg" firstAttribute="bottom" secondItem="ldO-QP-mOe" secondAttribute="bottom" id="L7G-lr-wSC"/>
+                            <constraint firstItem="YY8-61-Bgg" firstAttribute="trailing" secondItem="ldO-QP-mOe" secondAttribute="trailing" id="Xn8-36-q5k"/>
+                            <constraint firstItem="uGf-dO-GwP" firstAttribute="leading" secondItem="ldO-QP-mOe" secondAttribute="leading" id="Zq5-KS-pGy"/>
+                            <constraint firstItem="uGf-dO-GwP" firstAttribute="trailing" secondItem="ldO-QP-mOe" secondAttribute="trailing" id="bTz-DY-EM2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ldO-QP-mOe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Places" selectedImage="Globe" id="Iq1-4S-49h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03v-mk-7IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.60000000000002" y="-199.25037481259372"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SuZ-sd-QIq">
+            <objects>
+                <tabBarController id="DEC-XB-FNA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wTf-tL-3Mt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ezd-Lg-J9W" kind="relationship" relationship="viewControllers" id="LPz-f8-NXW"/>
+                        <segue destination="xO7-fy-uw6" kind="relationship" relationship="viewControllers" id="djn-IQ-24D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UW5-CP-xkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="134"/>
+        </scene>
+        <!--MapView-->
+        <scene sceneID="c97-Ha-UXJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapView" id="Psb-lt-b7M" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOA-v2-HZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="-430"/>
+        </scene>
+        <!--PlacesTable-->
+        <scene sceneID="kLD-Ik-qj1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlacesTable" id="Pft-WQ-eog" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1k-bC-iFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Globe" width="23" height="23"/>
+        <image name="Plus" width="21" height="21"/>
+    </resources>
+</document>

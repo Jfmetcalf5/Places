@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BB44122210A2A9C00F5D392 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB44121210A2A9C00F5D392 /* Place.swift */; };
+		3BB44124210A2AEF00F5D392 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB44123210A2AEF00F5D392 /* PlaceController.swift */; };
+		3BB44128210A2E2800F5D392 /* VisitedPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB44127210A2E2800F5D392 /* VisitedPlacesViewController.swift */; };
+		3BB4412A210A2E5B00F5D392 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB44129210A2E5B00F5D392 /* PlacesTableViewController.swift */; };
+		3BB4412C210A2E7700F5D392 /* CreateNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4412B210A2E7700F5D392 /* CreateNewPlaceViewController.swift */; };
+		3BB4412E210A32C000F5D392 /* PlacesTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB4412D210A32C000F5D392 /* PlacesTable.storyboard */; };
 		9DC8C28C210A1DAE00A4B391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8C28B210A1DAE00A4B391 /* AppDelegate.swift */; };
 		9DC8C291210A1DAE00A4B391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC8C28F210A1DAE00A4B391 /* Main.storyboard */; };
 		9DC8C293210A1DAF00A4B391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC8C292210A1DAF00A4B391 /* Assets.xcassets */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BB44121210A2A9C00F5D392 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3BB44123210A2AEF00F5D392 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
+		3BB44127210A2E2800F5D392 /* VisitedPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedPlacesViewController.swift; sourceTree = "<group>"; };
+		3BB44129210A2E5B00F5D392 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		3BB4412B210A2E7700F5D392 /* CreateNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPlaceViewController.swift; sourceTree = "<group>"; };
+		3BB4412D210A32C000F5D392 /* PlacesTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlacesTable.storyboard; sourceTree = "<group>"; };
 		9DC8C288210A1DAE00A4B391 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC8C28B210A1DAE00A4B391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC8C290210A1DAE00A4B391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BB44125210A2AF400F5D392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BB44121210A2A9C00F5D392 /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BB44126210A2AFC00F5D392 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BB44123210A2AEF00F5D392 /* PlaceController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
 		9DC8C27F210A1DAE00A4B391 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				9DC8C28B210A1DAE00A4B391 /* AppDelegate.swift */,
-				9DC8C2B4210A21A300A4B391 /* Protocols */,
-				9DC8C29F210A1E9F00A4B391 /* Model */,
-				9DC8C2A4210A1EE300A4B391 /* Model Controllers */,
+				3BB44125210A2AF400F5D392 /* Models */,
+				3BB44126210A2AFC00F5D392 /* ModelControllers */,
 				9DC8C2A7210A1F5000A4B391 /* View Controllers */,
+				9DC8C29E210A1DC800A4B391 /* Storyboards */,
 				9DC8C29D210A1DB500A4B391 /* Resources */,
 			);
 			path = Places;
@@ -69,7 +97,6 @@
 		9DC8C29D210A1DB500A4B391 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9DC8C29E210A1DC800A4B391 /* Storyboards */,
 				9DC8C292210A1DAF00A4B391 /* Assets.xcassets */,
 				9DC8C297210A1DAF00A4B391 /* Info.plist */,
 			);
@@ -80,39 +107,22 @@
 			isa = PBXGroup;
 			children = (
 				9DC8C28F210A1DAE00A4B391 /* Main.storyboard */,
+				3BB4412D210A32C000F5D392 /* PlacesTable.storyboard */,
 				9DC8C2B0210A206600A4B391 /* MapView.storyboard */,
 				9DC8C294210A1DAF00A4B391 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9DC8C29F210A1E9F00A4B391 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9DC8C2A4210A1EE300A4B391 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
 		9DC8C2A7210A1F5000A4B391 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9DC8C2AC210A1F9F00A4B391 /* MapViewController.swift */,
+				3BB44127210A2E2800F5D392 /* VisitedPlacesViewController.swift */,
+				3BB44129210A2E5B00F5D392 /* PlacesTableViewController.swift */,
+				3BB4412B210A2E7700F5D392 /* CreateNewPlaceViewController.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		9DC8C2B4210A21A300A4B391 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DC8C296210A1DAF00A4B391 /* LaunchScreen.storyboard in Resources */,
+				3BB4412E210A32C000F5D392 /* PlacesTable.storyboard in Resources */,
 				9DC8C293210A1DAF00A4B391 /* Assets.xcassets in Resources */,
 				9DC8C2B1210A206600A4B391 /* MapView.storyboard in Resources */,
 				9DC8C291210A1DAE00A4B391 /* Main.storyboard in Resources */,
@@ -187,8 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB44122210A2A9C00F5D392 /* Place.swift in Sources */,
+				3BB44124210A2AEF00F5D392 /* PlaceController.swift in Sources */,
 				9DC8C28C210A1DAE00A4B391 /* AppDelegate.swift in Sources */,
 				9DC8C2AD210A1F9F00A4B391 /* MapViewController.swift in Sources */,
+				3BB44128210A2E2800F5D392 /* VisitedPlacesViewController.swift in Sources */,
+				3BB4412C210A2E7700F5D392 /* CreateNewPlaceViewController.swift in Sources */,
+				3BB4412A210A2E5B00F5D392 /* PlacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = MC2BEA2U5Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Places/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,7 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = MC2BEA2U5Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Places/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
